@@ -3,666 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regularize sua obra e pague apenas o Justo de INSS | Diego Butzke</title>
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        section {
-            padding: 60px 0;
-        }
-        
-        h1, h2, h3 {
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            text-align: center;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: #3498db;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-        
-        ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #27ae60;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
-        }
-        
-        .btn:hover {
-            background: #219653;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
-        }
-        
-        .btn-large {
-            padding: 20px 40px;
-            font-size: 1.3rem;
-        }
-        
-        .text-center {
-            text-align: center;
-        }
-        
-        .section-bg {
-            background-color: white;
-        }
-        
-        .section-alt {
-            background-color: #f1f8ff;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #3498db, #2c3e50);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            color: white;
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero .btn {
-            background: #27ae60;
-            font-size: 1.3rem;
-            padding: 18px 40px;
-        }
-        
-        .microtext {
-            font-size: 0.9rem;
-            margin-top: 15px;
-            opacity: 0.9;
-        }
-        
-        /* Problem Section */
-        .problem-icons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .problem-icon {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            width: 150px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        /* Authority Section */
-        .authority-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-        
-        .authority-photo {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .authority-photo img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .authority-text {
-            flex: 2;
-            min-width: 300px;
-        }
-        
-        /* Solution Section */
-        .solution-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .solution-item {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .solution-item:hover {
-            transform: translateY(-10px);
-        }
-        
-        .solution-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #3498db;
-        }
-        
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .testimonial-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            position: relative;
-        }
-        
-        .testimonial-card:before {
-            content: "\"";
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            font-size: 5rem;
-            color: #3498db;
-            opacity: 0.2;
-            font-family: Georgia, serif;
-        }
-        
-        /* Method */
-        .method-steps {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 40px;
-            position: relative;
-        }
-        
-        .method-steps:before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 50px;
-            right: 50px;
-            height: 3px;
-            background: #3498db;
-            z-index: 1;
-        }
-        
-        .method-step {
-            flex: 1;
-            min-width: 200px;
-            text-align: center;
-            padding: 0 20px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: #3498db;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: bold;
-            margin: 0 auto 20px;
-        }
-        
-        /* Segmentation */
-        .segmentation-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .segment-item {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-        }
-        
-        /* Economy */
-        .economy-highlight {
-            background: #fff8e1;
-            border-left: 5px solid #ffc107;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 0 10px 10px 0;
-        }
-        
-        /* FAQ */
-        .faq-container {
-            max-width: 800px;
-            margin: 40px auto 0;
-        }
-        
-        .faq-item {
-            margin-bottom: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-        }
-        
-        .faq-question {
-            background: white;
-            padding: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            position: relative;
-        }
-        
-        .faq-question:after {
-            content: '+';
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.5rem;
-        }
-        
-        .faq-answer {
-            background: #f8f9fa;
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        
-        .faq-item.active .faq-answer {
-            padding: 20px;
-            max-height: 500px;
-        }
-        
-        .faq-item.active .faq-question:after {
-            content: '-';
-        }
-        
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 60px 0 30px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-section h3 {
-            color: white;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-        
-        .footer-links a {
-            display: block;
-            color: #bdc3c7;
-            margin-bottom: 10px;
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #34495e;
-            color: #bdc3c7;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 1.7rem;
-            }
-            
-            .hero {
-                padding: 50px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .authority-content {
-                flex-direction: column;
-            }
-            
-            .method-steps:before {
-                display: none;
-            }
-        }
-    </style>
+    <title>Diego Butzke — Especialista em Regularização de Obras & INSS da Obra</title>
+    
+    <link rel="icon" type="image/png" href="imagem/image-7.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <!-- 1. Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Regularize sua obra e pague apenas o Justo de INSS</h1>
-            <p>Eu assumo todo o processo e entrego sua regularização de forma rápida, segura e sem burocracia. Recebeu notificação ou tem pendências no CNO? Eu resolvo.</p>
-            <a href="https://wa.me/seunumerodewhatsapp" class="btn">Falar comigo no WhatsApp agora</a>
-            <p class="microtext">🔒 Atendimento rápido • Resposta em minutos • Processo seguro</p>
+            <h1>Regularize sua obra e pague apenas o que é justo de INSS</h1>
+            <p>Eu assumo todo o processo e entrego sua regularização de forma rápida, segura e sem burocracia.<br>
+Se você recebeu notificação, tem pendências no CNO ou não sabe se precisa pagar INSS da obra, eu analiso o seu caso e te explico exatamente o que está acontecendo de forma simples, transparente e com foco na economia do seu dinheiro.</p>
+            
+            <a href="https://wa.me/seunumerodewhatsapp" class="btn btn-large">Falar comigo no WhatsApp</a>
+            
+            <p class="microtext">Atendimento rápido • Resposta em minutos • Processo seguro</p>
+            <p class="microtext">Links rápidos: <a href="#" class="quick-links">Instagram</a> | <a href="#" class="quick-links">YouTube</a> | <a href="#" class="quick-links">LinkedIn</a> | <a href="#" class="quick-links">TikTok</a> | <a href="mailto:seuemail@exemplo.com" class="quick-links">E-mail</a></p>
         </div>
     </section>
 
-    <!-- 2. Identificação do Problema -->
     <section class="section-bg">
         <div class="container">
-            <h2>Por que você está aqui?</h2>
-            <div class="problem-icons">
-                <div class="problem-icon">
-                    ⚠️ Recebeu uma notificação da Receita e tem medo de multas altas?
+            <h2>Por que você está aqui</h2>
+            <p>A maioria das pessoas chega até mim porque:</p>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <p>Recebeu uma notificação da Receita e está com medo de multa</p>
                 </div>
-                <div class="problem-icon">
-                    🏗️ Fez uma obra e não sabe se precisa pagar o INSS?
+                <div class="problem-card">
+                    <p>Fez uma obra ou reforma e não sabe se precisa pagar INSS</p>
                 </div>
-                <div class="problem-icon">
-                    📄 Tem pendências travando seu CNO?
+                <div class="problem-card">
+                    <p>Tem pendências no CNO</p>
                 </div>
-                <div class="problem-icon">
-                    🏠 Não consegue vender ou financiar o imóvel por falta de documentos?
+                <div class="problem-card">
+                    <p>Está com documentos travados para vender ou financiar</p>
                 </div>
-                <div class="problem-icon">
-                    🤯 Tentou resolver sozinho e ficou perdido na burocracia?
+                <div class="problem-card">
+                    <p>Descobriu uma possível cobrança e não sabe se é verdadeira</p>
+                </div>
+                <div class="problem-card">
+                    <p>Tentou resolver sozinho e ficou ainda mais perdido</p>
                 </div>
             </div>
-            <p class="text-center"><strong>O maior problema não é o imposto. É a falta de clareza e o medo de errar. Eu te ajudo a resolver isso com segurança.</strong></p>
+            <p class="text-center">O maior problema não é o imposto. É a falta de clareza e o medo de errar.<br><strong>Eu te ajudo a resolver isso com segurança.</strong></p>
         </div>
     </section>
 
-    <!-- 3. Autoridade -->
     <section class="section-alt">
         <div class="container">
-            <h2>Quem vai cuidar do seu caso</h2>
             <div class="authority-content">
                 <div class="authority-photo">
-                    <!-- Placeholder for photo -->
-                    <div style="background: #ddd; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                        Foto Profissional
-                    </div>
+                    <img src="image/image-7.png" alt="Diego Butzke - Especialista em Regularização de Obras">
                 </div>
                 <div class="authority-text">
-                    <h3>Diego Butzke | Especialista em Regularização de Obras e INSS</h3>
-                    <p>Trabalho diariamente salvando o bolso de pessoas físicas e jurídicas em todo o Brasil. Meu trabalho é simples: analisar seu caso, explicar o que é realmente devido (sem "tecniquês") e conduzir a regularização para diminuir seus custos de forma legal e segura.</p>
-                    <p><strong>Diferencial:</strong> Nada de burocracia jogada para você. Eu cuido do início ao fim.</p>
+                    <h2>Diego Butzke — Especialista em Regularização de Obras & INSS da Obra</h2>
+                    <br>
+                    <p>Meu nome é Diego Butzke. Sou especialista em Regularização de Obras e INSS da Obra, e trabalho diariamente com casos reais de pessoas físicas e jurídicas em todo o Brasil.</p>
+                    <p>Meu trabalho é simples: te mostrar exatamente o que está acontecendo no seu caso, explicar o que realmente é devido e conduzir o processo de regularização para que você pague apenas o necessário, diminuindo os seus custos de forma segura e tranquila.</p>
+                    <p><strong>Nada de linguagem complicada.<br>
+Nada de burocracia jogada pra você.<br>
+Eu cuido do processo do início ao fim.</strong></p>
+                    <p>Links: <a href="#">Instagram</a> | <a href="#">YouTube</a> | <a href="#">LinkedIn</a> | <a href="#">TikTok</a> | <a href="mailto:seuemail@exemplo.com">E-mail</a></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Solução -->
     <section class="section-bg">
         <div class="container">
-            <h2>Como eu resolvo o seu problema</h2>
+            <h2>O que eu faço por você</h2>
             <div class="solution-list">
                 <div class="solution-item">
-                    <div class="solution-icon">🔍</div>
-                    <h3>Análise Completa</h3>
-                    <p>Avaliação do CNO e cruzamento de dados da Receita.</p>
+                    <p>Análise completa da situação da sua obra</p>
                 </div>
                 <div class="solution-item">
-                    <div class="solution-icon">📉</div>
-                    <h3>Redução de Custos</h3>
-                    <p>Cálculo técnico para eliminar cobranças indevidas.</p>
+                    <p>Avaliação do CNO e correção de pendências</p>
                 </div>
                 <div class="solution-item">
-                    <div class="solution-icon">🛡️</div>
-                    <h3>Defesa Técnica</h3>
-                    <p>Proteção contra multas abusivas.</p>
+                    <p>Verificação dos cruzamentos de dados da Receita Federal</p>
                 </div>
                 <div class="solution-item">
-                    <div class="solution-icon">✅</div>
-                    <h3>Regularização Total</h3>
-                    <p>Entrega da documentação final pronta.</p>
+                    <p>Cálculo técnico para redução ou eliminação de cobranças indevidas</p>
+                </div>
+                <div class="solution-item">
+                    <p>Orientação clara sobre o que realmente precisa ser pago</p>
+                </div>
+                <div class="solution-item">
+                    <p>Defesa técnica quando necessário</p>
+                </div>
+                <div class="solution-item">
+                    <p>Regularização completa até a entrega final da documentação</p>
                 </div>
             </div>
             <p class="text-center"><strong>O objetivo é sempre o mesmo: clareza, economia e segurança.</strong></p>
         </div>
     </section>
 
-    <!-- 5. Prova Social -->
     <section class="section-alt">
         <div class="container">
-            <h2>Quem já economizou e regularizou comigo</h2>
+            <h2>Prova social Casos reais resolvidos</h2>
+            <p>(Aqui você insere prints, avaliações, depoimentos e resultados reais)</p>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p>"Eu estava desesperado com uma notificação alta. O Diego analisou e mostrou que eu podia pagar bem menos. Resolvi rápido."</p>
+                    <p>"Eu estava desesperado com uma notificação alta. O Diego analisou, explicou tudo e mostrou que eu podia pagar bem menos. Resolvi rápido e com segurança."</p>
                 </div>
                 <div class="testimonial-card">
                     <p>"Meu processo estava parado há meses. Com o Diego, em poucos dias tudo clareou e saiu."</p>
                 </div>
-                <div class="testimonial-card">
-                    <p>"Economizei mais de R$ 15.000,00 com a análise do Diego. Serviço impecável!"</p>
-                </div>
             </div>
-            <div class="text-center" style="margin-top: 40px;">
+            <div class="text-center margin-top-50">
                 <a href="https://wa.me/seunumerodewhatsapp" class="btn">Quero que você analise meu caso</a>
             </div>
         </div>
     </section>
 
-    <!-- 6. Método -->
     <section class="section-bg">
         <div class="container">
-            <h2>Entenda como funciona</h2>
-            <p class="text-center">É simples</p>
+            <h2>Como funciona o processo</h2>
             <div class="method-steps">
                 <div class="method-step">
                     <div class="step-number">1</div>
-                    <h3>Contato</h3>
-                    <p>Você me envia sua dúvida ou notificação no WhatsApp.</p>
+                    <p>Você me envia sua dúvida ou notificação pelo WhatsApp</p>
                 </div>
                 <div class="method-step">
                     <div class="step-number">2</div>
-                    <h3>Análise</h3>
-                    <p>Eu estudo seu caso e explico a situação real.</p>
+                    <p>Eu analiso seu caso e explico exatamente o que está acontecendo</p>
                 </div>
                 <div class="method-step">
                     <div class="step-number">3</div>
-                    <h3>Verdade</h3>
-                    <p>Te mostro o valor real e se há como reduzir.</p>
+                    <p>Te mostro o valor real da cobrança e se existe possibilidade de redução</p>
                 </div>
                 <div class="method-step">
                     <div class="step-number">4</div>
-                    <h3>Execução</h3>
-                    <p>Assumo o processo e entrego tudo pronto.</p>
+                    <p>Se fizer sentido, assumo todo o processo por você</p>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">5</div>
+                    <p>Você recebe tudo regularizado, sem burocracia e com total segurança</p>
                 </div>
             </div>
-            <p class="text-center"><strong>100% Online • Transparência Total</strong></p>
+            <p class="text-center"><strong>100% online • Transparência total • Sem termos técnicos confusos</strong></p>
         </div>
     </section>
 
-    <!-- 7. Segmentação -->
     <section class="section-alt">
         <div class="container">
-            <h2>Esse serviço é para você que:</h2>
+            <h2>Para quem é esse serviço</h2>
+            <p>Esse serviço é ideal se você:</p>
             <div class="segmentation-list">
-                <div class="segment-item">🏗️ Construiu, reformou ou ampliou.</div>
-                <div class="segment-item">📄 Precisa da CND para averbar, vender ou financiar.</div>
-                <div class="segment-item">🚫 Está travado com CNO pendente.</div>
-                <div class="segment-item">💰 Não quer perder dinheiro pagando impostos indevidos.</div>
+                <div class="segment-item">Construiu, reformou ou ampliou</div>
+                <div class="segment-item">Está com CNO pendente</div>
+                <div class="segment-item">Recebeu notificação e não sabe o que fazer</div>
+                <div class="segment-item">Precisa regularizar para vender ou financiar</div>
+                <div class="segment-item">Está preocupado com multa ou cobrança indevida</div>
+                <div class="segment-item">Não sabe quanto vai pagar</div>
+                <div class="segment-item">Não tem tempo para lidar com burocracia</div>
             </div>
         </div>
     </section>
 
-    <!-- 8. Economia -->
     <section class="section-bg">
         <div class="container">
-            <h2>Não pague mais do que deve por falta de informação</h2>
-            <p>Muitos pagam valores altos por erros simples como:</p>
+            <h2>A dor financeira e como eu te ajudo a economizar</h2>
+            <p>Muita gente paga mais do que deveria por falta de orientação técnica.</p>
+            <p>Erros comuns que geram cobranças altas:</p>
             <div class="economy-highlight">
                 <ul>
-                    <li>Preenchimento errado de dados.</li>
-                    <li>CNO incompleto.</li>
-                    <li>Prazos ignorados.</li>
+                    <li>Informações preenchidas de forma errada</li>
+                    <li>CNO incompleto</li>
+                    <li>Documentação divergente</li>
+                    <li>Dados que não batem com a Receita</li>
+                    <li>Tentativas de resolver sozinho</li>
+                    <li>Prazos ignorados</li>
                 </ul>
             </div>
-            <p><strong>Antes de pagar qualquer guia, fale comigo. Em muitos casos, a economia é significativa.</strong></p>
-            <div class="text-center" style="margin-top: 30px;">
+            <p>Antes de você pagar qualquer valor, eu calculo o que é realmente devido.<br>
+Em muitos casos, isso significa economia significativa e, às vezes, nem existe cobrança real.</p>
+            <p class="text-center"><strong>O objetivo é simples: evitar prejuízo e resolver seu caso da forma mais econômica e segura possível.</strong></p>
+            <div class="text-center margin-top-40">
                 <a href="https://wa.me/seunumerodewhatsapp" class="btn">Quero descobrir se posso pagar menos</a>
             </div>
         </div>
     </section>
 
-    <!-- 9. Perguntas Frequentes -->
     <section class="section-alt">
         <div class="container">
-            <h2>Perguntas Frequentes</h2>
+            <h2>Por que falar comigo</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <p>Atendimento direto com o especialista</p>
+                </div>
+                <div class="problem-card">
+                    <p>Explicação simples e transparente</p>
+                </div>
+                <div class="problem-card">
+                    <p>Foco absoluto em reduzir custos</p>
+                </div>
+                <div class="problem-card">
+                    <p>Experiência prática com casos reais</p>
+                </div>
+                <div class="problem-card">
+                    <p>Processo seguro, sem burocracia pra você</p>
+                </div>
+                <div class="problem-card">
+                    <p>Você entende exatamente o que está acontecendo</p>
+                </div>
+                <div class="problem-card">
+                    <p>Trabalho 100% online e em todo o Brasil</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-bg">
+        <div class="container">
+            <h2>Perguntas frequentes</h2>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">Preciso mesmo pagar INSS da obra?</div>
+                    <div class="faq-question">Preciso realmente pagar INSS da obra?</div>
                     <div class="faq-answer">
-                        <p>Depende. Eu analiso seu caso específico. Muitas pessoas recebem notificações indevidas ou pagam valores acima do necessário. Uma análise detalhada pode mostrar que você não deve nada ou que pode pagar muito menos.</p>
+                        <p>Depende. Cada caso é único. Eu analiso e te explico.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Dá para reduzir o valor?</div>
+                    <div class="faq-question">É possível reduzir o valor?</div>
                     <div class="faq-answer">
-                        <p>Sim, na maioria dos casos há cobranças indevidas ou erros de cálculo. Trabalho especificamente para identificar essas situações e garantir que você pague apenas o que é justo.</p>
+                        <p>Em grande parte dos casos, sim. Muitas pessoas pagam mais do que deveriam.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Preciso ir na Receita?</div>
+                    <div class="faq-question">Quanto tempo leva?</div>
                     <div class="faq-answer">
-                        <p>Não. Eu resolvo tudo online para você. Todo o processo é feito remotamente, sem burocracia ou deslocamentos. Você recebe relatórios e documentos prontos para uso.</p>
+                        <p>A análise inicial é feita no mesmo dia.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Atende meu estado?</div>
+                    <div class="faq-question">Atende todo o Brasil?</div>
                     <div class="faq-answer">
-                        <p>Sim, atendo todo o Brasil de forma digital. A legislação federal permite que eu trabalhe com clientes de qualquer estado brasileiro.</p>
+                        <p>Sim, totalmente online.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Preciso ir até a Receita ou prefeitura?</div>
+                    <div class="faq-answer">
+                        <p>Não. Eu cuido de tudo pra você.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 10. Rodapé e CTA Final -->
+    <section class="hero cta-section">
+        <div class="container">
+            <h2>Evite multas, cobranças indevidas e perda de tempo.</h2>
+            <p>Fale comigo e descubra quanto você realmente precisa pagar de forma segura e transparente.</p>
+            <a href="https://wa.me/seunumerodewhatsapp" class="btn btn-large">Mandar mensagem para o WhatsApp</a>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Evite multas e dor de cabeça</h3>
-                    <p>Regularize sua obra de forma justa com quem entende do assunto.</p>
-                    <a href="https://wa.me/seunumerodewhatsapp" class="btn btn-large">Falar com Diego no WhatsApp</a>
+                    <h3>Diego Butzke</h3>
+                    <p>Regularização de Obras e Consultoria Previdenciária.</p>
+                    <br>
+                    <a href="https://wa.me/seunumerodewhatsapp" class="btn footer-btn">Entrar em Contato</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Links Rápidos</h3>
+                    <h3>Contatos</h3>
                     <div class="footer-links">
+                        <a href="mailto:seuemail@exemplo.com">CNPJ</a>
+                        <a href="mailto:seuemail@exemplo.com">E-mail</a>
+                        <a href="https://wa.me/seunumerodewhatsapp">WhatsApp</a>
                         <a href="#">Instagram</a>
                         <a href="#">YouTube</a>
-                        <a href="#">LinkedIn</a>
                         <a href="#">TikTok</a>
-                        <a href="#">E-mail</a>
+                        <a href="#">LinkedIn</a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <div class="footer-links">
-                        <a href="#">CNPJ</a>
-                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Política de privacidade</a>
+                        <a href="#">Termos de uso</a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Diego Butzke - Regularização de Obras e INSS. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Diego Butzke. Todos os direitos reservados. CNPJ xx.xxx.xxx/0001-xx</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple FAQ accordion functionality
+        // Script simples para o efeito "Sanfona" no FAQ
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const item = question.parentNode;
+                // Fecha os outros itens se quiser que apenas um fique aberto por vez:
+                // document.querySelectorAll('.faq-item').forEach(i => { if(i !== item) i.classList.remove('active'); });
                 item.classList.toggle('active');
             });
         });
